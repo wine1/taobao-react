@@ -1,0 +1,18 @@
+.good-list {
+    width: 100%;
+    ul {
+        width: 100%;
+        padding-top: 1rem;
+        background: #eee;
+        li {
+            display: inline-block;
+            width: 46%;
+            height: 16rem;
+            margin:  0 2% 1rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.search {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    .wrap-search {
+        width: 80%;
+        margin: 0 10%;
+        border-radius: 3rem;
+        border: 1px #eee solid;
+        background-image: url(../assets/icon_search_little.png);
+        background-repeat: no-repeat;
+        background-size: 2.4rem 2.4rem;
+        background-position: 1rem 0;
+        background-color: #fff;
+        input {
+            border: 0;
+            height: 2.5rem;
+            margin-left: 4rem;
+            line-height: 2.7rem;
+            font-size: 1.3rem;
+            color: #333;
+        }
+        .ca-icon {
+            float: right;
+            width: 2rem;
+            height: 1.7rem;
+            margin-right: 1rem;
+            margin-top: .5rem;
+            background-image: url(../assets/cam.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
