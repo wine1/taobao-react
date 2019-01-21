@@ -14,12 +14,12 @@ footer {
     width: 100%;
     li {
       flex: 1;
-      link {
+      Link,a {
         display: inline-block;
         height: 100%;
         width: 100%;
       }
-      .footer-home {
+      &.footer-home {
         background: url("../assets/uik_nav_home_normal.png") no-repeat;
         background-size: contain;
         background-position: center center;
@@ -29,7 +29,7 @@ footer {
           background-position: center center;
         }
       }
-      .footer-weitao {
+      &.footer-weitao {
         background: url("../assets/uik_nav_weitao_normal.png") no-repeat;
         background-size: contain;
         background-position: center center;
@@ -39,7 +39,7 @@ footer {
           background-position: center center;
         }
       }
-      .footer-message {
+      &.footer-message {
         background: url("../assets/uik_nav_message_normal.png") no-repeat;
         background-size: contain;
         background-position: center center;
@@ -49,7 +49,7 @@ footer {
           background-position: center center;
         }
       }
-      .footer-cart {
+      &.footer-cart {
         background: url("../assets/uik_nav_cart_normal.png") no-repeat;
         background-size: contain;
         background-position: center center;
@@ -59,7 +59,7 @@ footer {
           background-position: center center;
         }
       }
-      .footer-mine {
+      &.footer-mine {
         background: url("../assets/uik_nav_my_normal.png") no-repeat;
         background-size: contain;
         background-position: center center;

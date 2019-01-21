@@ -1,24 +1,32 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 export default class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentIndex: 0
+    };
+  }
+
   render() {
     return (
       <div>
         <footer>
           <ul>
-            <li>
-              <link to="/" className="footer-home active" />
+            <li className="footer-home active">
+              <Link to="/" />
             </li>
-            <li>
-              <link to="/weitao" className="footer-weitao" />
+            <li className="footer-weitao">
+              <Link to="/weitao" />
             </li>
-            <li>
-              <link to="/message" className="footer-message" />
+            <li className="footer-message">
+              <Link to="/message" />
             </li>
-            <li>
-              <link to="./cart" className="footer-cart" />
+            <li className="footer-cart">
+              <Link to="/cart" />
             </li>
-            <li>
-              <link to="./mine" className="footer-mine" />
+            <li className="footer-mine">
+              <Link to="/mine" />
             </li>
           </ul>
         </footer>
