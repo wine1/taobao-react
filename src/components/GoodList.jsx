@@ -1,40 +1,44 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
+import axios from "axios";
 
+const resource = "http://172.30.66.29:4000";
 
-export default class GoodList extends Component{
-    render(){
-        return(
-            <div className="good-list">
-                <ul>
-                    <li>
-                        <img src={require('../assets/img/1.jpg')} alt=""/>
-                        <div className="good-name">hahaha</div>
+export default class GoodList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-                    </li>
-                    <li>
-                        <img src={require('../assets/img/94f97ce12535e47b49aa231a257e1ae6.jpeg')} alt=""/>
-                        <div className="good-name">hahaha</div>
-                    </li>
-                    <li>
-                        <img src={require('../assets/img/1.jpg')} alt=""/>
-                        <div className="good-name">hahaha</div>
+    };
+    this.getGoods = this.getGoods.bind(this);
+  }
 
-                    </li>
-                    <li>
-                        <img src={require('../assets/img/94f97ce12535e47b49aa231a257e1ae6.jpeg')} alt=""/>
-                        <div className="good-name">hahaha</div>
-                    </li>
-                    <li>
-                        <img src={require('../assets/img/1.jpg')} alt=""/>
-                        <div className="good-name">hahaha</div>
+  componentDidMount() {
+    this.getGoods();
+  }
 
-                    </li>
-                    <li>
-                        <img src={require('../assets/img/94f97ce12535e47b49aa231a257e1ae6.jpeg')} alt=""/>
-                        <div className="good-name">hahaha</div>
-                    </li>
-                </ul>
-            </div>
-        )
-    }
+  getGoods() {
+    axios
+      .get(resource + "/api/goodslist/get")
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+         
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    console.log(this.state.goods);
+  }
+  render() {
+    let { goods } = this.state;
+    return (
+      <div className="good-list">
+        <ul>
+          
+        </ul>
+      </div>
+    );
+  }
 }
